@@ -1,0 +1,12 @@
+{
+  "name": "api-rest",
+  "version": "1.0.0",
+  "description": "Projeto de estudo com Node.js utilizando conceitos de API Rest com Express e MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
