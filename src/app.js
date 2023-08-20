@@ -2,6 +2,8 @@ import express from "express";
 
 const app = express();
 
+app.use(express.json())
+
 const books = [
   {id: 1, "titulo": "Senhor dos Anéis"},
   {id: 2, "titulo": "O Hobbit"}
@@ -13,6 +15,11 @@ app.get('/', (req, res) => {
 
 app.get('/livros', (req, res) => {
   res.status(200).json(books)
+})
+
+app.post('/livros', (req, res) => {
+  books.push(req.body);
+  res.status(201).send('Livro foi cadastrado com sucesso')
 })
 
 export default app
