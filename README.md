@@ -27,3 +27,8 @@ Projeto de estudo com Node.js utilizando conceitos de API Rest com Express e Mon
 - Instalar e utilizar a biblioteca Mongoose que é uma solução baseada em esquemas (Schemas) para modelar o banco de dados;
 - Criar o schema de livros, para representar a coleção livros no banco de dados, definindo o como será o documento armazenado e os campos requeridos;
 - Fazer a conexão da API com o banco de dados, verificando se a mesma ocorreu com sucesso ou não.
+
+### Módulo 04:
+- A separar os arquivos em pacotes específicos, de acordo com um objetivo em comum, como models, controllers, routes;
+- A criar uma classe com métodos estáticos, para usar no arquivo de rotas, deixando o código mais intuitivo e descritivo sobre o que será executado para cada rota;
+- A utilizar alguns métodos fornecidos pela biblioteca mongoose para a manipulação dos dados no banco, como find, findById, findByIdAndUpdate e findByIdAndDelete.
