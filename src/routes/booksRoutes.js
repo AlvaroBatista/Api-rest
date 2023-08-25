@@ -9,5 +9,4 @@ router.post("/livros", BookController.registerBook)
 router.put("/livros/:id", BookController.updateBook)
 router.delete("/livros/:id", BookController.deleteBook)
 
-
 export default router;

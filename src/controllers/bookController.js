@@ -10,7 +10,7 @@ class BookController {
 
     static searchBookById = (req, res) => {
         const { id } = req.params
-        
+
         books.findById(id, (err, books) => {
             if(err) {
                 res.status(400).send({message: `${err.message} - Id do livro não localizado.`})
@@ -22,7 +22,7 @@ class BookController {
 
     static registerBook = (req, res) => {
         let book = new books(req.body)
-        
+
         book.save((err) => {
         if(err) {
             res.status(500).send({message: `${err.message} - falha ao cadastrar livro.`})
@@ -34,7 +34,7 @@ class BookController {
 
     static updateBook = (req, res) => {
         const { id } = req.params
-        
+
         books.findByIdAndUpdate(id, {$set: req.body}, (err) => {
             if(!err) {
                 res.status(200).send({message: 'Livro atualizado com sucesso'})
