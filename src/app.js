@@ -19,11 +19,6 @@ app.get('/livros/:id', (req, res) => {
   res.json(books[index]);
 })
 
-app.post('/livros', (req, res) => {
-  books.push(req.body);
-  res.status(201).send('Livro foi cadastrado com sucesso')
-})
-
 app.put('/livros/:id', (req, res) => {
   let index = searchBook(req.params.id);
   books[index].title = req.body.title;
