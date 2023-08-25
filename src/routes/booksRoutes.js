@@ -7,6 +7,7 @@ router.get("/livros", BookController.searchBooks)
 router.get("/livros/:id", BookController.searchBookById)
 router.post("/livros", BookController.registerBook)
 router.put("/livros/:id", BookController.updateBook)
+router.delete("/livros/:id", BookController.deleteBook)
 
 
 export default router;

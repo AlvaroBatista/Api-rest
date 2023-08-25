@@ -37,14 +37,24 @@ class BookController {
         
         books.findByIdAndUpdate(id, {$set: req.body}, (err) => {
             if(!err) {
-              res.status(200).send({message: 'Livro atualizado com sucesso'})
+                res.status(200).send({message: 'Livro atualizado com sucesso'})
             } else {
-              res.status(500).send({message: err.message})
+                res.status(500).send({message: err.message})
             }
         })
     }
 
-    
+    static deleteBook = (req, res) => {
+        const { id } = req.params;
+
+        books.findByIdAndDelete(id, (err) => {
+            if(!err){
+                res.status(200).send({message: 'Livro removido com sucesso'})
+            } else {
+                res.status(500).send({message: err.message})
+            }
+        })
+    }
 }
 
 export default BookController
