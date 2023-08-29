@@ -4,9 +4,10 @@ import BookController from "../controllers/bookController.js";
 const router = express.Router();
 
 router.get("/livros", BookController.searchBooks)
-router.get("/livros/:id", BookController.searchBookById)
-router.post("/livros", BookController.registerBook)
-router.put("/livros/:id", BookController.updateBook)
-router.delete("/livros/:id", BookController.deleteBook)
+.get("/livros/busca", BookController.searchBookByPublishingCompany)
+.get("/livros/:id", BookController.searchBookById)
+.post("/livros", BookController.registerBook)
+.put("/livros/:id", BookController.updateBook)
+.delete("/livros/:id", BookController.deleteBook)
 
 export default router;
